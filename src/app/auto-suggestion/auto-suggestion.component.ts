@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auto-suggestion.component.css'],
 })
 export class AutoSuggestionComponent implements OnInit {
-  countries: string[] = [
+
+  public eventMessage : string = "";
+  public countries: string[] = [
     'India',
     'Sri-Lanka',
     'Bangladesh',
@@ -16,6 +18,20 @@ export class AutoSuggestionComponent implements OnInit {
     'Bhutan',
     'Bangladesh',
   ];
+  public IsBind: boolean = true;
+  public var_clsBinding = {
+    clsBindingMulti: this.IsBind,
+    clsBinding: this.IsBind,
+  };
+  
+  public OnClickMe(): void{
+    this.eventMessage = "Clicked the button-Event occured";
+  }
+
+  public styles = {
+    color:'green',
+    fontStyle: 'Italic'
+  }
 
   constructor() {}
 

@@ -1,18 +1,29 @@
 <form class="example-form">
-  Country
-  <select>
-    <option *ngFor="let country of countries" value="{{ country }}">
-      {{ country }}
-    </option>
-  </select>
+Country
+<select>
+  <option *ngFor="let country of countries" value="{{ country }}">
+    {{ country }}
+  </option>
+</select>
 
-  <div>
-    <button
-      mat-raised-button
-      color="primary"
-      aria-label="Example icon button with a home icon"
-    >
-      This is my Text Button
-    </button>
-  </div>
+<p [class.clsBinding]="IsBind" > Class Binding example </p>
+<p [ngClass] = "var_clsBinding"> Multiple class Binding</p>
+
+<p [style.color] = "'Red'">Style Binding example </p>
+<p [style.color] = "IsBind ? '#838834': 'Red'">Style Ternory operator example </p>
+<p [ngStyle] = "styles">Style Binding multiple styles</p>
+
+<div>
+  <button
+    mat-raised-button
+    color="primary"
+    aria-label="Example icon button with a home icon">
+    This is my Text Button
+  </button>
+</div>
+
+<div>
+  <a href="#" [class]="var_clsBinding" (mouseover)="OnClickMe()" (click)="OnClickMe()" >Click Me (Event Bind)</a>
+  <p>{{eventMessage}}</p>
+</div>
 </form>

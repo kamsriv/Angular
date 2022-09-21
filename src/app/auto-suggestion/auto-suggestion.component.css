@@ -1,4 +1,14 @@
-div
-{
+div {
   padding-top: 20px;
+}
+.clsBinding {
+  color: orange;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.clsBindingMulti
+{
+  font-style: italic;
+  text-transform:uppercase;
 }
